@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yangiliklar</title>
+    <link rel="stylesheet" href="52-maktab.css">
+</head>
+<body>
+         <div class="navbar">
+        <ul class="maktab">
+            <li class="ichki"><a href="52-maktab.html">Bosh Sahifa</a></li>
+            <li class="ichki"><a href="Rahbariyat.html">Rahbariyat</a></li>
+            <li class="ichki"><a href="Faoloquvchilar.html">Faol O'quvchilar</a></li>
+            <li class="ichki"><a href="yangilikar.html">Yangiliklar</a></li>
+            <li class="ichki"><a href="boglanish.html">Bog'lanish</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="news-header">
+        <h1>Maktab <span>Yangiliklari</span></h1>
+        <p>52-maktab hayotidagi eng so'nggi voqealar va e'lonlar</p>
+    </div>
+
+    <div class="news-container">
+      <div class="news-container">
+    <div class="news-card">
+        <div class="news-img">📚</div>
+        <div class="news-body">
+            <span class="news-date">14-APREL, 2026</span>
+            <h3 class="news-title">Kitobxonlik haftaligi tadbiri</h3>
+            <p class="news-text">Maktabimiz kutubxonasida "Eng yaxshi kitobxon" tanlovi bo'lib o'tdi...</p>
+            <a href="javascript:void(0)" class="read-more" 
+               onclick="openModal('Kitobxonlik haftaligi', '14-APREL, 2026', 'Bugun maktabimizda kitobxonlik haftaligi yuqori saviyada tashkil etildi. Tadbirda o\'quvchilar o\'zlari sevgan asarlar bo\'yicha taqdimotlar qilishdi. Yakunda eng faol kitobxonlar maktab direktori tomonidan faxriy yorliqlar bilan taqdirlandilar.')">
+               Batafsil ma'lumot →
+            </a>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <div class="news-img" style="background: linear-gradient(45deg, #2ecc71, #27ae60);">🏅</div>
+        <div class="news-body">
+            <span class="news-date">16-APREL, 2026</span>
+            <h3 class="news-title">Sport Haftaligi</h3>
+            <p class="news-text">Haftaning Payshanba kuni maktabimizda sportning voleybol yonalishida sinflar o'rtasida musobaqa bo'lib o'tadi</p>
+            <a href="javascript:void(0)" class="read-more" 
+               onclick="openModal('Sport haftaligi', '16-APREL, 2026', 'Har hafta o\'tkaziladigan sport musobaqasida 9-aprek kuni sportning shaxmat-shashka yo\'nalishida sinflar o\'rtasida musobqa bolib o\'tgandi. 16-aprelda esa sportning voleybol yo\'nalishida musobaqa bo\'lib o\'tadi!')">
+               Batafsil ma'lumot →
+            </a>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <div class="news-img" style="background: linear-gradient(45deg, #3498db, #2980b9);">📢</div>
+        <div class="news-body">
+            <span class="news-date">5-APREL, 2026</span>
+            <h3 class="news-title">E'lon: Ota-onalar majlisi</h3>
+            <p class="news-text">Kelasi dushanba kuni barcha sinflar uchun umumiy majlis bo'lib o'tadi.</p>
+            <a href="javascript:void(0)" class="read-more" 
+               onclick="openModal('Muhim e\'lon: Ota-onalar majlisi', '5-APREL, 2026', 'Hurmatli ota-onalar! 20-aprel kuni soat 15:00 da maktabimizning faollar zalida navbatdagi umumiy yig\'ilish bo\'lib o\'tadi. Kun tartibida o\'quvchilarning choraklik baholari, maktab formasi va kelgusi imtihonlar masalasi ko\'rib chiqiladi. Ishtirokingiz muhim.')">
+               Batafsil ma'lumot →
+            </a>
+        </div>
+    </div>
+</div>
+
+       
+
+        
+    </div>
+    <div id="newsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDate" style="color: #888; font-size: 14px;"></p>
+        <hr>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+function openModal(title, date, text) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDate').innerText = date;
+    document.getElementById('modalBody').innerText = text;
+    document.getElementById('newsModal').style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById('newsModal').style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    let modal = document.getElementById('newsModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
